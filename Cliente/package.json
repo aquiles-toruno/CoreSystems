@@ -1,0 +1,32 @@
+{
+  "name": "prueba-core",
+  "version": "1.0.0",
+  "description": "Cliente hecho con AngularJs, consumiendo Api .Net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack"
+  },
+  "author": "Aquiles Toruño González",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.7.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.17.0",
+    "script-loader": "^0.7.0",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.3.0"
+  }
+}

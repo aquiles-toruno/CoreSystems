@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Detalle de factura</strong>
+    </div>
+    <div class="panel-body">
+        <a href="#!/" style="display: block; margin-bottom: 7px">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            Listado
+        </a>
+        <div class="well">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <strong>Código:</strong>
+                    <span>{{factura.Codigo}}</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <strong>Cliente:</strong>
+                    <span>{{factura.Cliente.Nombre}}</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <strong>Total:</strong>
+                    <span>{{factura.Total | currency}}</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <strong>Fecha:</strong>
+                    <span>{{factura.Fecha | date:'dd-MM-yyyy'}}</span>
+                </div>
+            </div>
+
+
+        </div>
+        <table class="table table-striped table-condensed">
+            <thead>
+                <th>Item #</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="detalle in factura.DetalleFacturas">
+                    <td>{{$index + 1}}</td>
+                    <td>{{detalle.Producto.Nombre}}</td>
+                    <td>{{detalle.Cantidad}}</td>
+                    <td>{{detalle.Precio | currency}}</td>
+                    <td>{{detalle.Total | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
